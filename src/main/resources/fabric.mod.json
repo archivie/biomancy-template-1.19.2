@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "biomancy",
+	"version": "${version}",
+	"name": "Biomancy",
+	"description": "automation through shaping life itself",
+	"authors": [
+		"archivie"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/biomancy/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.ren.biomancy.Biomancy"
+		],
+		"client": [
+			"net.ren.biomancy.BiomancyClient"
+		],
+		"fabric-datagen": [
+			"net.ren.biomancy.BiomancyDataGenerator"
+		]
+	},
+	"mixins": [
+		"biomancy.mixins.json",
+		{
+			"config": "biomancy.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.1",
+		"minecraft": "~1.19.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
